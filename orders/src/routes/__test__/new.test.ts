@@ -9,7 +9,7 @@ it('returns an error if the ticket does not exsit', async () => {
   const ticketId = mongoose.Types.ObjectId()
 
   await request(app)
-    .post('api/orders')
+    .post('/api/orders')
     .set('Cookie', global.signup())
     .send({ ticketId })
     .expect(404)
